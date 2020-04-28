@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exo ville API</title>
     <style>
+    body{
+        text-align: center;
+    }
     .error{
         color:red;
     }
     .view{
-        border: 1px solid black;
-        min-height: 200px;
-        width: 80%;
+        border: 2px solid black;
+        min-height: 300px;
+        width: 50%;
         margin:auto;
-        padding: 25px;
+        margin-top: 30px;
+        padding: 15px;
     }
     .overlay{
             position: fixed;
@@ -29,8 +33,12 @@
     </style>
 </head>
 <body>
+
+<h1>Récupérer les infos d'une ville à partir de l'api :<br><a href="https://api.gouv.fr/api/api-geo.html">https://api.gouv.fr/api/api-geo.html</a></h1>
+    <p style="font-size: 2rem;">URL de base :<br>https://geo.api.gouv.fr/communes/?nom=VILLE</p>
+
     <form action="https://geo.api.gouv.fr/communes/" method="GET">
-        <input type="text" name="nom" id="form-ville">
+        <input type="text" name="nom" id="form-ville" placeholder="Ville">
         <input type="submit" value="Envoyer">
     </form>
 

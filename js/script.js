@@ -13,10 +13,10 @@ $('form').submit(function(e){
 
     $('form').find('.error').remove();
 
-    let ville = $('#form-ville');
+    let ville = $('#form-ville').val();
 
-    if(ville.val().length == 2 || ville.val().length < 2){
-        $('form').prepend('<p class="error">Vous devez écrire au moins 3 caractères</p>');
+    if(ville.length < 1){
+        $('.view').html('<p class="error">Vous devez écrire au moins 1 caractère</p>');
     } else{
         $.ajax({
             type: $(this).attr('method'),
@@ -64,10 +64,14 @@ $('form').submit(function(e){
 
                     cityTables.find('tbody').append(newCity);
                 });
+
                 $('.view').html(cityTables);
             },
             complete: function(){
                 removeOverlay();
+            },
+            error: function(){
+                $('.view').html('<p class="error">Problème de connexion</p>');
             }
 
         });
