@@ -26,7 +26,7 @@ $('form').submit(function(e){
     if(ville.length < 1){
         $('.view').html('<p class="error">Vous devez écrire au moins 1 caractère</p>');
     } else{
-
+        //Requête AJAX pour récupérer la liste des villes auprès de l'api
         $.ajax({
             type: $(this).attr('method'),
             url: $(this).attr('action'),
@@ -92,7 +92,7 @@ $('form').submit(function(e){
             complete: function(){
                 removeOverlay();
             },
-            //En cas de problème de connexion
+            //En cas de problème de connexion avec l'api
             error: function(){
                 $('.view').html('<p class="error">Problème de connexion</p>');
             }
