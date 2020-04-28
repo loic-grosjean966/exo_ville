@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exo ville API</title>
     <style>
+    .error{
+        color:red;
+    }
+    .view{
+        border: 1px solid black;
+        min-height: 200px;
+        width: 80%;
+        margin:auto;
+        padding: 25px;
+    }
     .overlay{
             position: fixed;
             top: 0;
@@ -19,8 +29,8 @@
     </style>
 </head>
 <body>
-    <form action="" method="GET">
-        <input type="text" name="ville" id="form-ville">
+    <form action="https://geo.api.gouv.fr/communes/" method="GET">
+        <input type="text" name="nom" id="form-ville">
         <input type="submit" value="Envoyer">
     </form>
 
