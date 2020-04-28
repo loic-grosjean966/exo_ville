@@ -1,0 +1,2 @@
+https://geo.api.gouv.fr/communes/?
+https://www.anthony-demon.com/city/
