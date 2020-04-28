@@ -30,6 +30,9 @@
             justify-content: center;
             align-items: center;
         }
+        .results{
+            color: green;
+        }
     </style>
 </head>
 <body>
