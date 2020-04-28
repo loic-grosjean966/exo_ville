@@ -84,7 +84,7 @@ $('form').submit(function(e){
                     //Placer la ligne créée dans le tableau cityTables
                     cityTables.find('tbody').append(newCity);
                 });
-                $('form').append('<p class="results">Résultats:'+data.length+'</p>')
+                $('form').append('<p class="results">Résultats:'+data.length+'</p>');
                 //Affiche le tableau dans la div ".view"
                 $('.view').html(cityTables);
             },
